@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>EdYoda JS final project | By Deva</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <script
+      src="https://kit.fontawesome.com/806bb3d9b4.js"
+      crossorigin="anonymous"
+    ></script>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://code.jquery.com/jquery-3.6.1.min.js"
+      integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ="
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <div class="header">
+      <div class="left-menu">
+        <div class="logo">
+          <a onclick="openMainPage()"> <span>SHOP</span>LANE </a>
+        </div>
+        <a style="margin-left: 32px;" href="#clothing-section">CLOTHING</a>
+        <a style="margin-left: 32px;" href="#accessories-section">ACCESSORIES</a>
+      </div>
+      <div class="search">
+        <i class="fas fa-search" area-hidden="true"></i>
+        <input
+          type="text"
+          class="search-input"
+          placeholder="Search for Clothing And Accessories"
+        />
+      </div>
+      <div class="right-menu">
+        <div class="cart">
+          <p class="cart-count"></p>
+          <a id="cart-click">
+            <i class="fas fa-shopping-cart" area-hidden="true"></i>
+          </a>
+        </div>
+        <img
+          src="https://test-hosting-8f9bf.web.app/assets/avatar.jpg"
+          alt="img"
+        />
+      </div>
+    </div>
+    <div class="container" id="homepage">
+      <div
+        id="carouselExampleCaptions"
+        class="carousel slide"
+        data-bs-ride="carousel"
+      >
+        <div class="carousel-inner">
+          <div
+            class="carousel-item active"
+            style="transition: transform 500ms ease 0s"
+          >
+            <img
+              src="./undefined - Imgur.png"
+              class="d-block w-100"
+              alt="..."
+            />
+          </div>
+          <div
+            class="carousel-item"
+            style="transition: transform 500ms ease 0s"
+          >
+            <img
+              src="./undefined - Imgur (1).png"
+              class="d-block w-100"
+              alt="..."
+            />
+          </div>
+          <div
+            class="carousel-item"
+            style="transition: transform 500ms ease 0s"
+          >
+            <img
+              src="./undefined - Imgur (2).png"
+              class="d-block w-100"
+              alt="..."
+            />
+          </div>
+          <div
+            class="carousel-item"
+            style="transition: transform 500ms ease 0s"
+          >
+            <img
+              src="./undefined - Imgur (3).png"
+              class="d-block w-100"
+              alt="..."
+            />
+          </div>
+        </div>
+      </div>
+      <div class="carousel-indicators" style="position: relative">
+        <button
+          style="
+            background-color: rgba(128, 128, 128, 0.642);
+            width: 12px;
+            border-radius: 50%;
+            height: 12px;
+          "
+          type="button"
+          data-bs-target="#carouselExampleCaptions"
+          data-bs-slide-to="0"
+          class="active"
+          aria-current="true"
+          aria-label="Slide 1"
+        ></button>
+        <button
+          style="
+            background-color: rgba(128, 128, 128, 0.642);
+            width: 12px;
+            border-radius: 50%;
+            height: 12px;
+          "
+          type="button"
+          data-bs-target="#carouselExampleCaptions"
+          data-bs-slide-to="1"
+          aria-label="Slide 2"
+        ></button>
+        <button
+          style="
+            background-color: rgba(128, 128, 128, 0.642);
+            width: 12px;
+            border-radius: 50%;
+            height: 12px;
+          "
+          type="button"
+          data-bs-target="#carouselExampleCaptions"
+          data-bs-slide-to="2"
+          aria-label="Slide 3"
+        ></button>
+        <button
+          style="
+            background-color: rgba(128, 128, 128, 0.642);
+            width: 12px;
+            border-radius: 50%;
+            height: 12px;
+          "
+          type="button"
+          data-bs-target="#carouselExampleCaptions"
+          data-bs-slide-to="3"
+          aria-label="Slide 4"
+        ></button>
+      </div>
+      <div class="container mt-5">
+        <h3 id="clothing-section" style="margin-bottom: 34px">
+          Clothing for Men and Women
+        </h3>
+        <div class="box1">
+          <div class="card">
+            <img style="width: 100%" class="img" />
+            <div class="card-body">
+              <h6 id="card-title"></h6>
+              <p id="card-text"></p>
+              <p class="price"></p>
+            </div>
+          </div>
+          <div class="card">
+            <img class="img" />
+            <div class="card-body">
+              <h6 id="card-title"></h6>
+              <p id="card-text"></p>
+              <p class="price"></p>
+            </div>
+          </div>
+          <div class="card">
+            <img class="img" />
+            <div class="card-body">
+              <h6 id="card-title"></h6>
+              <p id="card-text"></p>
+              <p class="price"></p>
+            </div>
+          </div>
+          <div class="card">
+            <img class="img" />
+            <div class="card-body">
+              <h6 id="card-title"></h6>
+              <p id="card-text"></p>
+              <p class="price"></p>
+            </div>
+          </div>
+          <div class="card">
+            <img class="img" />
+            <div class="card-body">
+              <h6 id="card-title"></h6>
+              <p id="card-text"></p>
+              <p class="price"></p>
+            </div>
+          </div>
+          <!-- <h3
+          id="accessories-section"
+          style="margin-bottom: 34px; margin-top: 100px;width: 100%;"
+          >
+          Accessories for Men and Women
+          </h3> -->
+          <div class="card">
+            <img class="img" />
+            <div class="card-body">
+              <h6 id="card-title"></h6>
+              <p id="card-text"></p>
+              <p class="price"></p>
+            </div>
+          </div>
+          <div class="card">
+            <img class="img" />
+            <div class="card-body">
+              <h6 id="card-title"></h6>
+              <p id="card-text"></p>
+              <p class="price"></p>
+            </div>
+          </div>
+          <div class="card">
+            <img class="img" />
+            <div class="card-body">
+              <h6 id="card-title"></h6>
+              <p id="card-text"></p>
+              <p class="price"></p>
+            </div>
+          </div>
+          <div class="card">
+            <img class="img" />
+            <div class="card-body">
+              <h6 id="card-title"></h6>
+              <p id="card-text"></p>
+              <p class="price"></p>
+            </div>
+          </div>
+          <div class="card">
+            <img class="img" />
+            <div class="card-body">
+              <h6 id="card-title"></h6>
+              <p id="card-text"></p>
+              <p class="price"></p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="container cart-box">
+      <h1 id="cart-box-heading">Checkout</h1>
+      <div class="cart-box-main">
+        <div class="cart-box-left">
+          <h3>Total Items: <span id="total-items"></span></h3>
+          <!-- <div class="checkout-card">
+            <div class="check-img">
+              <img
+                class="checkout-img"
+              />
+            </div>
+            <div class="checkout-card-item">
+              <h4 id="prodName">Men Navy Blue Solid Sweatshirt</h4>
+              <p>X1</p>
+              <p>
+                <span>Amount: Rs</span>
+                <span>2599</span>
+              </p>
+            </div>
+          </div> -->
+        </div>
+        <div class="cart-box-right">
+          <div class="right-card">
+            <h3 id="right-card-heading">Total Amount</h3>
+            <p id="amount">Amount: Rs. <span id="total-amount"></span></p>
+            <button class="right-card-btn bigger">Place Order</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="confirmed-order">
+      <img src="./checkimage.png" alt=".." />
+      <h2>Order Placed Successfully!!</h2>
+      <p>We have sent you an email with the product details.</p>
+    </div>
+    <div class="container product-detail-main">
+      <div id="detail-container">
+        <div class="big-img-div">
+          <img style="width: 100%" class="big-img" />
+        </div>
+        <div class="right-box">
+          <p class="heading">Men Navy Blue Solid Sweatshirt</p>
+          <p class="brand">United Colors of Benetton</p>
+          <p class="price">Price: Rs <span id="product-price"> 2599</span></p>
+          <p class="desc">Description</p>
+          <p class="desc-text">
+            Navy solid sweatshirt with patchwork, has a round neck, long
+            sleeves, straight hem
+          </p>
+          <p class="desc">Product Preview</p>
+          <div class="preview">
+            <img class="image active-border" />
+            <img class="image" />
+            <img class="image" />
+            <img class="image" />
+            <img class="image" />
+          </div>
+          <button
+            type="button"
+            class="add-cart-btn bigger"
+            onclick="showCartCounter(event)"
+          >
+            Add to Cart
+          </button>
+        </div>
+      </div>
+    </div>
+    <img class="edyoda-project-logo" src="./edyodaLogo.png" alt="edyoda-project-logo">
+    <footer>
+      <div>
+        <p class="footer-heading">ONLINE STORE</p>
+        <a class="footer-link" href="/">MEN CLOTHING</a>
+        <a class="footer-link" href="/">WOMEN CLOTHING</a>
+        <a class="footer-link" href="/">MEN ACCESSORIES</a>
+        <a class="footer-link" href="/">WOMEN ACCESSORIES</a>
+      </div>
+      <div>
+        <p class="footer-heading">HELPFUL LINK</p>
+        <a href="/" class="footer-link">HOME</a>
+        <a href="/" class="footer-link">ABOUT</a>
+        <a href="/" class="footer-link">CONTACT</a>
+      </div>
+      <div>
+        <p class="footer-heading">PARTNERS</p>
+        <a href="/" class="footer-link">ZARA</a>
+        <a href="/" class="footer-link">PANTALOONS</a>
+        <a href="/" class="footer-link">LEVIS</a>
+        <a href="/" class="footer-link">UCB</a>
+        <a href="/" class="footer-link">+ MANY MORE</a>
+      </div>
+      <div>
+        <p class="footer-heading">ADDRESS</p>
+        <a href="/" class="footer-link">BUILDING 101</a>
+        <a href="/" class="footer-link">CENTRAL AVENUE</a>
+        <a href="/" class="footer-link">LA-902782</a>
+        <a href="/" class="footer-link">UNITED STATES</a>
+      </div>
+    </footer>
+    <script src="./script.js"></script>
+  </body>
+</html>
